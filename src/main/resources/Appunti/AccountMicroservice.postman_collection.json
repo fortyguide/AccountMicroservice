@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "919256b6-aa62-494a-b1b8-4e69e4651612",
+		"name": "AccountMicroservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "RGNLSN87H13D761R",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Abba",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8094/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elenco operazioni per account",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSR05MU044N0gxM0Q3NjFSIiwiZXhwIjoxNzAyMzk3MzQzLCJuYW1lIjoiQWxlc3NhbmRybyBBcmdlbnRpZXJpIiwic2NvcGUiOiJ1c2VyIn0.RIl0GZHoDLBvosmW8n-koePOZBbzn-Jk-zSx302RAdc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUk5GQkE4NU0wOEQ3NjFNIiwiZXhwIjoxNzAyNDA0NDg2LCJuYW1lIjoiRmFiaW8gRmlvcmVuemEiLCJzY29wZSI6InVzZXIifQ.APY3vorzXuclTjJZbX37dNyQcqPImkc9Rio8oWXIw24",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8094/operations/account/cn4563df3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"operations",
+						"account",
+						"cn4563df3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elenco account per utente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUk5GQkE4NU0wOEQ3NjFNIiwiZXhwIjoxNzAyNDA2MDYzLCJuYW1lIjoiRmFiaW8gRmlvcmVuemEiLCJzY29wZSI6InVzZXIifQ.CozCKsrRyIbZ9EGRmeYVE7sTjqvGIxtunLvua4Eotec",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8094/accounts/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"accounts",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggiunta operazione",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUk5GQkE4NU0wOEQ3NjFNIiwiZXhwIjoxNzAyNDA2MDYzLCJuYW1lIjoiRmFiaW8gRmlvcmVuemEiLCJzY29wZSI6InVzZXIifQ.CozCKsrRyIbZ9EGRmeYVE7sTjqvGIxtunLvua4Eotec",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "blabla",
+							"type": "default"
+						},
+						{
+							"key": "date",
+							"value": "12/12/2012",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "a simple adding test",
+							"type": "default"
+						},
+						{
+							"key": "value",
+							"value": "1000.00",
+							"type": "default"
+						},
+						{
+							"key": "fkAccount1",
+							"value": "ccccccc",
+							"type": "default"
+						},
+						{
+							"key": "fkAccount2",
+							"value": "aaaaaaaa",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8094/operations/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"operations",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
