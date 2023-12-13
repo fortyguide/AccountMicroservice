@@ -30,7 +30,7 @@ public class Operation {
     @Getter @Setter
     private String description;
 
-    @Column(name = "VALUE")
+    @Column(name = "AMOUNT")
     @Getter @Setter
     private Double value;
 
