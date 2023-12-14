@@ -63,7 +63,6 @@
 			<version>2.2.7</version>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<resources>
 			<resource>
